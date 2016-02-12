@@ -10,7 +10,18 @@
 //The function also normalises A if its 1st element is not 1.
 //beacuse A(1) should be 1 before the conversion takes place.
 //Output variable lsp is a vector giving the line spectral frequencies.
+//Example 
+//a=[1.0000  -1.5419  1.3523  -0.7197  0.3206]
+//lsp=lpc2lsp(a)
+//lsp= 0.5288239  
+   // 0.7817111  
+    //1.3209563  
+    //1.8529858  
+
 //Reference
+
+[1] SPEECH CODING ALGORITHMS Foundation and Evolution of Standardized Coders by WAI C. CHU. 
+[2]Matlab help document.
 
 
 function lsp= lpc2lsp(a)
