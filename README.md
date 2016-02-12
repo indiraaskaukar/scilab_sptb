@@ -8,14 +8,19 @@ pc=rc2poly(rc)
 Description:
 
 input: 
+
 Vector rc defining the reflection coefficients of filter.
 
 output:
+
 Vector pc which gives the prediction filter polynomial coefficients.
 
 function:
+
 pc=rc2poly(rc)
+
 The reflection coefficients specified by vector rc are converted to the polynomial coefficients .
+
 The Levinson's recursion algorithm is used to calculate the output.
 
 Examples:
@@ -24,6 +29,7 @@ x=rc2poly(a)
  x=   1.    0.6160941    0.9911707    0.1661259    0.1063811    0.1597
 
 References:
+
 [1]Matlab help document.
 
 
@@ -31,15 +37,20 @@ References:
 
 
 
+
+
 lpc2lsp
+
 The function converts prediction filter coefficients to line spectral frequencies.
 
 syntax
+
 lsp= lpc2lsp(a)
 
 Description:
 
 input: 
+
 vector a which defines the coefficients of prediction polynomial.
 
 All the roots of a should be inside the unit circle.
@@ -48,10 +59,12 @@ Vector a is normalized if first element of a is not 1.
 
 
 output: 
+
 vector lsp ,which defines the line spectral frequencies.
 
 
 function:
+
 lsp=lpc2lsp(a) 
 
 Generates two polynomials P and Q using a, where P is anti symmetric and Q is a symmetric polynomial.
@@ -81,6 +94,7 @@ lsp= 0.5288239
 
 
 References:
+
 [1] SPEECH CODING ALGORITHMS Foundation and Evolution of Standardized Coders by WAI C. CHU. 
 
 [2]Matlab help document.
