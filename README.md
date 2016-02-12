@@ -33,32 +33,55 @@ References:
 
 lpc2lsp
 The function converts prediction filter coefficients to line spectral frequencies.
+
 syntax
 lsp= lpc2lsp(a)
+
 Description:
+
 input: 
 vector a which defines the coefficients of prediction polynomial.
+
 All the roots of a should be inside the unit circle.
+
 Vector a is normalized if first element of a is not 1.
+
+
 output: 
 vector lsp ,which defines the line spectral frequencies.
+
+
 function:
 lsp=lpc2lsp(a) 
+
 Generates two polynomials P and Q using a, where P is anti symmetric and Q is a symmetric polynomial.
+
 If m is the order of polynomial a;
+
 For m even: Q has zero at -1 and P has at +1
+
 For m odd:  P has zero at +1 and -1.
+
 The order reduction is done by removing these zeros.
+
 The roots of new P and Q is calculated.
+
 The phase angles of r1 and r2 gives the line spectral frequencies.
+
 Examples:
+
 a=[1.0000  -1.5419  1.3523  -0.7197  0.3206]
+
 lsp=lpc2lsp(a)
+
 lsp= 0.5288239  
     0.7817111  
     1.3209563  
     1.8529858  
+
+
 References:
 [1] SPEECH CODING ALGORITHMS Foundation and Evolution of Standardized Coders by WAI C. CHU. 
+
 [2]Matlab help document.
 
